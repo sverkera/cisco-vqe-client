@@ -104,7 +104,7 @@ dnl OpenSSL check
 AC_CHECK_HEADERS(openssl/evp.h)
 
 if test "x$ac_cv_header_openssl_evp_h" = "xyes"; then
-	AC_CHECK_LIB(ssl, EVP_sha1,,,-lcrypto)
+	AC_CHECK_LIB(ssl, EVP_sha1,[SSL_LIBS=-lssl -lcrypto],,-lcrypto)
 fi
 
 if test "$sslon" = "yes"; then

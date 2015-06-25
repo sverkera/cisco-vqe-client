@@ -111,7 +111,7 @@ ifeq ($(HAVE_UPNP), 1)
 endif
 
 ifeq ($(HAVE_OPENSSL), 1)
-	VQEC_DEP_EXTERNAL += -lssl
+	VQEC_DEP_EXTERNAL += -lssl -lcrypto
 endif
 
 #
